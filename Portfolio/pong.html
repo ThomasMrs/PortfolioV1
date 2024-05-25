@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <script src="./assets/Pong/pong.js"></script>
+    <link rel="shortcut icon" type="image/png" href="assets/raquetteicon.png"/>
+    <title>Pong</title>
+    <style>
+        /* Add a style to hide the description text initially */
+     .description-text {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="glass-container">
+            <nav class="navbar">
+                <div class="logo"><a href="#">Pong Jeu</a></div>
+                <ul class="nav-links">
+                    <li class="nav-link">
+                        <a href="#" id="description-btn">Description</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" id="go-back-btn">Retour</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="main">
+                    <h2>Pong🏓<br></h2>
+                    <p>
+                        Créé en seconde, ce jeu de Pong a été codé en JavaScript <br>
+                        Soluta ducimus dicta nisi quisquam rerum
+                    </p>
+                    <a href="./assets/Pong/index.html" target="_blank"><button>Start</button></a>
+                </div>
+            </div>
+                <div class="image-wrapper">
+                    <img src="/assets/pong.png" alt="">
+                </div>
+                <div class="description-text" id="description-text">
+                    </br>
+                    </br>
+                    Bienvenue sur notre jeu Pong ! Pong est un jeu classique d'arcade qui a été créé dans les années 1970. Dans notre version de Pong, deux joueurs s'affrontent pour marquer des points en se renvoyant une balle à l'aide de palettes de chaque côté de l'écran.                    </br>
+                    </br> 
+                    </br> 
+                    Pour commencer à jouer, cliquez sur le bouton "Démarrer" sur la page d'accueil. Le jeu s'ouvrira dans une nouvelle fenêtre avec un thème similaire à la page d'accueil.
+                    </br>
+                    </br> 
+                    Pour contrôler la palette du côté gauche de l'écran, utilisez les touches W et S de votre clavier pour la déplacer vers le haut et le bas. Pour contrôler la palette du côté droit de l'écran, utilisez les touches I et N de votre clavier.                    </br>
+                    </br>
+                    La balle se déplace en diagonale à travers l'écran et rebondit sur les palettes et les bords de l'écran. Si la balle touche le sol du côté d'un joueur, l'autre joueur marque un point. Le premier joueur à atteindre 10 points gagne le jeu.                    </br>
+                    </br>
+                    Il y a aussi quelques fonctionnalités supplémentaires dans notre version de Pong. Vous pouvez augmenter ou diminuer la vitesse de la balle en utilisant les touches + et - de votre clavier. De plus, il y a une animation de texte en haut de l'écran qui affiche les noms des créateurs du jeu.                    </br>
+                    </br>
+                    Nous espérons que vous apprécierez notre jeu Pong ! Amusez-vous bien !                    </br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the description button and text elements
+        const descriptionBtn = document.getElementById('description-btn');
+        const descriptionText = document.getElementById('description-text');
+        const mainContent = document.querySelector('.main');
+        const imageWrapper = document.querySelector('.image-wrapper');
+
+        // Add an event listener to the description button
+        descriptionBtn.addEventListener('click', () => {
+            // Toggle the visibility of the description text and the rest of the content
+            descriptionText.style.display = 'block';
+            mainContent.style.display = 'none';
+            imageWrapper.style.display = 'none';
+        });
+
+        // Add an event listener to the go back button
+        const goBackBtn = document.getElementById('go-back-btn');
+        goBackBtn.addEventListener('click', () => {
+            // Toggle the visibility of the description text and the rest of the content
+            descriptionText.style.display = 'none';
+            mainContent.style.display = 'block';
+            imageWrapper.style.display = 'block';
+        });
+    </script>
+
+</body>
+
+</html>

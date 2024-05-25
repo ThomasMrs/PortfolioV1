@@ -1,0 +1,6 @@
+	if(y && x == xballe && yballe){
+		mb1=-mb1;
+	}
+	if(y2 && x2 == xballe && yballe){
+		mb1=-mb1;
+	}	
